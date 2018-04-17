@@ -12990,11 +12990,13 @@ var DraftEditorContents = function (_React$Component) {
       var customRenderer = blockRendererFn(_block);
       var CustomComponent = void 0,
           customProps = void 0,
-          customEditable = void 0;
+          customEditable = void 0,
+          customWrapper = void 0;
       if (customRenderer) {
         CustomComponent = customRenderer.component;
         customProps = customRenderer.props;
         customEditable = customRenderer.editable;
+        customWrapper = customRenderer.customWrapper;
       }
 
       var direction = textDirectionality ? textDirectionality : directionMap.get(key);
@@ -13016,7 +13018,7 @@ var DraftEditorContents = function (_React$Component) {
       };
 
       var configForType = blockRenderMap.get(blockType) || blockRenderMap.get('unstyled');
-      var wrapperTemplate = configForType.wrapper;
+      var wrapperTemplate = customWrapper || configForType.wrapper;
 
       var Element = configForType.element || blockRenderMap.get('unstyled').element;
 
