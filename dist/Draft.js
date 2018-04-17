@@ -12996,7 +12996,7 @@ var DraftEditorContents = function (_React$Component) {
         CustomComponent = customRenderer.component;
         customProps = customRenderer.props;
         customEditable = customRenderer.editable;
-        customWrapper = customRenderer.customWrapper;
+        customWrapper = customRenderer.wrapper;
       }
 
       var direction = textDirectionality ? textDirectionality : directionMap.get(key);

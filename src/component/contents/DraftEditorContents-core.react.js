@@ -157,7 +157,7 @@ class DraftEditorContents extends React.Component<Props> {
         CustomComponent = customRenderer.component;
         customProps = customRenderer.props;
         customEditable = customRenderer.editable;
-        customWrapper = customRenderer.customWrapper;
+        customWrapper = customRenderer.wrapper;
       }
 
       const direction = textDirectionality
